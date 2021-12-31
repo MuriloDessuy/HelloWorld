@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Hello World</title>
+		<!-- HTML5 -->
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		mubaaaaaaaaaaaaaaaaaa
+		<div id="muba-id">
+			
+		</div>
+	</body>
+	<script>
+
+		console.log("1 2 3")
+		console.log("4 5 6")
+		console.log("7 8 9")
+		Jogo()
+		function Jogo (){
+			let variavel = "1 2 3\n4 5 6\n7 8 9"
+			for(let i = 0; i < 9; i ++ ){
+				var jogada = prompt("Faça sua jogada")
+				console.log(jogada)
+				var Ponto
+				if (i%2==0) {
+					Ponto = "x"
+				} else { 
+					Ponto = "o"
+				}
+				variavel = variavel.replace(jogada, Ponto )
+				
+				console.log(variavel)
+			}
+		}
+		
+	</script>
+</html>
