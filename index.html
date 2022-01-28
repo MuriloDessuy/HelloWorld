@@ -18,18 +18,39 @@
 		Jogo()
 		function Jogo (){
 			let variavel = "1 2 3\n4 5 6\n7 8 9"
-			for(let i = 0; i < 9; i ++ ){
+			let podejogar = true
+			let jogadasRealizadas = 0
+			while(podejogar){
 				var jogada = prompt("Faça sua jogada")
-				console.log(jogada)
-				var Ponto
-				if (i%2==0) {
-					Ponto = "x"
-				} else { 
-					Ponto = "o"
-				}
-				variavel = variavel.replace(jogada, Ponto )
-				
-				console.log(variavel);
+				if ((jogada.includes('1') 
+					|| jogada.includes('2')
+					|| jogada.includes('3')
+					|| jogada.includes('4')
+					|| jogada.includes('5')
+					|| jogada.includes('6')
+					|| jogada.includes('7')
+					|| jogada.includes('8')
+					|| jogada.includes('9'))
+				) {
+					jogadasRealizadas++
+					if (jogadasRealizadas == 9) {
+						podejogar = false
+					}
+					console.log(jogada)
+					var Ponto
+					if (jogadasRealizadas % 2 == 0) {
+						Ponto = "x"
+					} 	else { 
+						Ponto = "o"
+					}
+					variavel = variavel.replace(jogada, Ponto )
+					
+					console.log(variavel);
+					var sequencia
+					if (sequencia == "x\nx\nx") {
+						console.log("Voce ganhou")
+					}
+				} 
 			}
 		}
 	</script>

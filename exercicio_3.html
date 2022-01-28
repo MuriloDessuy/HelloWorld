@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Exercício 1</title>
+		<!-- HTML5 -->
+		<meta charset="utf-8"/>
+	</head>
+	<body style="height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center; background-color: rgb(90, 90, 90);">	
+		<div id="muba-id" style="width: 500px; height: 500px; padding: 50px; background-color: #FFF;">
+			
+		</div>
+	</body>
+	<script>
+		
+		var Dias = parseInt(prompt("Dias"))	
+		var Meses = parseInt(prompt("Meses"))
+		var Anos = parseInt(prompt("Anos"))
+		var Idade = Dias + Meses*30 + Anos*365
+		document.getElementById('muba-id').innerHTML += 'a Sua Idade em Dias é <br>' + Idade;
+
+	</script>
+</html>

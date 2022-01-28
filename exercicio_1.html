@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Exercício 1</title>
+		<!-- HTML5 -->
+		<meta charset="utf-8"/>
+	</head>
+	<body style="height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center; background-color: rgb(90, 90, 90);">	
+		<div id="muba-id" style="width: 500px; height: 500px; padding: 50px; background-color: #FFF;">
+			
+		</div>
+	</body>
+	<script>
+		
+		var x1 = prompt("Isira o valor de x1")
+		var x2 = prompt("Isira o valor de x2")
+		var y1 = prompt("Isira o valor de y1")
+		var y2 = prompt("Isira o valor de y2")
+		var distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)) 
+		document.getElementById('muba-id').innerText += 'a distancia é \n' + distancia;
+
+	</script>
+</html>

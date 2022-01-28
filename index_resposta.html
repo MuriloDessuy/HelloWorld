@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title>Hello World</title>
+		<meta charset="utf-8"/>
+		<style>
+			#jogo {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				font-size: 150px;
+			}
+
+			.line {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.pos {
+				background-color: #CCC;
+				padding: 20px;
+				width: 200px;
+				height: 200px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.pos-stripe {
+				background-color: #FFF;
+			}
+		</style>
+	</head>
+	<body style="height: 100vh; width: 100vw; padding: 0; margin: 0;">
+		<div id="jogo" style="display: flex; align-items: center; justify-content: center;">
+			<div class="line first-line">
+				<div id="pos1" class="pos"></div>
+				<div id="pos2" class="pos pos-stripe"></div>
+				<div id="pos3" class="pos"></div>
+			</div>
+			<div class="line second-line">
+				<div id="pos4" class="pos pos-stripe"></div>
+				<div id="pos5" class="pos"></div>
+				<div id="pos6" class="pos pos-stripe"></div>
+			</div>	
+			<div class="line thrid-line">
+				<div id="pos7" class="pos"></div>
+				<div id="pos8" class="pos pos-stripe"></div>
+				<div id="pos9" class="pos"></div>
+			</div>
+		</div>
+	</body>
+	<script>
+		let jogo = {
+			pos1: '',
+			pos2: '',
+			pos3: '',
+			pos4: '',
+			pos5: '',
+			pos6: '',
+			pos7: '',
+			pos8: '',
+			pos9: '',
+		}
+		let jogador = 'X';
+
+		for (const position of Object.keys(jogo)) {
+			document.getElementById(position).addEventListener('click', () => fazerJogada(position));
+		}
+
+		function fazerJogada(position) {
+			let element = document.getElementById(position);
+			if (element.innerText != '') {
+				alert('Aqui não pode jogar');
+				return;
+			} 
+			element.innerText = jogador;
+			jogador = jogador === 'X' ? 'O' : 'X';
+		}
+	</script>
+</html>

@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Exercício 1</title>
+		<!-- HTML5 -->
+		<meta charset="utf-8"/>
+	</head>
+	<body style="height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center; background-color: rgb(90, 90, 90);">	
+		<div id="muba-id" style="width: 500px; height: 500px; padding: 50px; background-color: #FFF;">
+			
+		</div>
+	</body>
+	<script>
+		
+		var Dias = parseInt(prompt("Dias"))	
+		let Dias2 = Dias
+		var Anos = 0
+		var Meses = 0
+			while (Dias > 29) {
+				if(Dias > 364){
+					Anos ++
+					Dias = Dias - 365
+				}
+				if(Dias > 29 && Dias < 365){
+					Meses ++
+					Dias = Dias - 30
+					
+				}
+				console.log(Dias)
+			}
+		
+		let Anos2 = 0
+		let Meses2 = 0
+		if(Dias2 > 364){
+			Anos2 = parseInt(Dias2 / 365)
+			Dias2 -= Anos2 * 365
+		}
+		if(Dias2 > 29){
+			Meses2 = parseInt(Dias2 / 30)
+			Dias2 -= Meses2 * 30
+		}
+		console.log(Anos2, Meses2, Dias2)
+
+		document.getElementById('muba-id').innerHTML += 'Voce tem ' + Anos + " Anos<br>";
+		document.getElementById('muba-id').innerHTML += 'Voce tem ' + Meses + " Meses<br>";
+		document.getElementById('muba-id').innerHTML += 'Voce tem ' + Dias + " Dias<br>";
+
+	</script>
+</html>
